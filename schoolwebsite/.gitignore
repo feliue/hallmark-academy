@@ -1,0 +1,30 @@
+# Environment and secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+# Database
+db.sqlite3
+
+# Virtual environment
+myenv/
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# OS files
+.DS_Store
+Thumbs.db

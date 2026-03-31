@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<div style="background: linear-gradient(135deg, #1F4E79, #2E75B6); color:white; padding: 100px 0; text-align:center;">
+    <div class="container">
+        <h1 class="display-4 fw-bold">🎓 Welcome to Al-Hikman University</h1>
+        <p class="lead mt-3">Excellence in Education, Character & Innovation</p>
+        <a href="/students/portal/" class="btn btn-warning btn-lg mt-3 me-2">Student Portal</a>
+        <a href="/about/" class="btn btn-outline-light btn-lg mt-3">Learn More</a>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow p-4">
+                <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                <h4>Quality Education</h4>
+                <p>World class education with experienced lecturers and modern facilities.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow p-4">
+                <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                <h4>Student Community</h4>
+                <p>A vibrant and diverse student community that grows together.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow p-4">
+                <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+                <h4>Excellence & Awards</h4>
+                <p>Recognised for academic excellence and outstanding achievements.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NEWS SECTION -->
+<div style="background:#f8f9fa; padding: 50px 0;">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color:#1F4E79;">📰 Latest News</h2>
+        <div class="text-center">
+            <a href="/news/" class="btn btn-primary">View All News</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Home / Contact</p>
+    </div>
+</div>
+
+<div class="container" style="padding: 80px 0;">
+    <div class="row">
+        <div class="col-md-5 mb-5 mb-md-0">
+            <p class="section-label">Get in Touch</p>
+            <h2 class="section-title">We Would Love to Hear From You</h2>
+            <div class="section-line"></div>
+            <p style="color: #555; line-height: 1.9; font-size: 15px; margin-bottom: 30px;">Whether you are a
+                prospective student, a parent, or a member of the public, we welcome your enquiries and will respond
+                promptly.</p>
+
+            <div style="margin-bottom: 22px;">
+                <p style="font-weight: 600; color: #0a1628; margin-bottom: 4px; font-size: 14px;">Address</p>
+                <p style="color: #666; font-size: 14px; margin: 0;">Hallmark Academy, Nigeria</p>
+            </div>
+            <div style="margin-bottom: 22px;">
+                <p style="font-weight: 600; color: #0a1628; margin-bottom: 4px; font-size: 14px;">Email</p>
+                <p style="color: #666; font-size: 14px; margin: 0;">info@hallmarkacademy.edu.ng</p>
+            </div>
+            <div style="margin-bottom: 22px;">
+                <p style="font-weight: 600; color: #0a1628; margin-bottom: 4px; font-size: 14px;">Phone</p>
+                <p style="color: #666; font-size: 14px; margin: 0;">+234 905 565 7576</p>
+            </div>
+            <div>
+                <p style="font-weight: 600; color: #0a1628; margin-bottom: 4px; font-size: 14px;">Office Hours</p>
+                <p style="color: #666; font-size: 14px; margin: 0;">Monday to Friday — 8:00am to 4:00pm</p>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div style="background: #f4f7fb; padding: 45px; border-radius: 4px;">
+                <h4 style="font-family: Playfair Display, serif; color: #0a1628; margin-bottom: 25px;">Send Us a Message
+                </h4>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div style="margin-bottom: 20px;">
+                        <label
+                            style="font-weight: 600; color: #333; font-size: 13px; display: block; margin-bottom: 7px;">Full
+                            Name</label>
+                        <input type="text" name="name" placeholder="Enter your full name"
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #c8d5e3; border-radius: 3px; font-size: 14px; background: white;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label
+                            style="font-weight: 600; color: #333; font-size: 13px; display: block; margin-bottom: 7px;">Email
+                            Address</label>
+                        <input type="email" name="email" placeholder="Enter your email"
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #c8d5e3; border-radius: 3px; font-size: 14px; background: white;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label
+                            style="font-weight: 600; color: #333; font-size: 13px; display: block; margin-bottom: 7px;">Subject</label>
+                        <input type="text" name="subject" placeholder="What is your enquiry about?"
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #c8d5e3; border-radius: 3px; font-size: 14px; background: white;">
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <label
+                            style="font-weight: 600; color: #333; font-size: 13px; display: block; margin-bottom: 7px;">Message</label>
+                        <textarea name="message" rows="5" placeholder="Write your message here"
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #c8d5e3; border-radius: 3px; font-size: 14px; background: white; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit"
+                        style="background: #0a1628; color: white; border: none; padding: 13px 30px; border-radius: 3px; font-size: 14px; font-weight: 600; cursor: pointer; width: 100%;">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

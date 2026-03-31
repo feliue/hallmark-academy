@@ -1,0 +1,62 @@
+<div class="page-header">
+    <div class="container">
+        <h1>Student Portal</h1>
+        <p>Home / Student Portal</p>
+    </div>
+</div>
+
+<div class="container" style="padding: 80px 0;">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+
+            <div
+                style="background: #f4f7fb; border-left: 4px solid #0a1628; padding: 22px 28px; margin-bottom: 30px; border-radius: 2px;">
+                <h5 style="color: #0a1628; margin: 0; font-family: Playfair Display, serif;">Welcome, {{
+                    request.user.username|title }}</h5>
+                <p style="color: #666; margin: 6px 0 0; font-size: 14px;">Below is a record of your academic results.
+                    Please contact the academic office if you notice any discrepancies.</p>
+            </div>
+
+
+            <div style="border: 1px solid #dde4ed; border-radius: 4px; overflow: hidden;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <thead>
+                        <tr style="background: #0a1628; color: white;">
+                            <th style="padding: 15px 20px; text-align: left; font-weight: 600;">Subject</th>
+                            <th style="padding: 15px 20px; text-align: left; font-weight: 600;">Score</th>
+                            <th style="padding: 15px 20px; text-align: left; font-weight: 600;">Grade</th>
+                            <th style="padding: 15px 20px; text-align: left; font-weight: 600;">Term</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr style="border-bottom: 1px solid #dde4ed;">
+                            <td style="padding: 14px 20px; color: #333;">{{ result.subject }}</td>
+                            <td style="padding: 14px 20px; color: #333;">{{ result.score }}</td>
+                            <td style="padding: 14px 20px; color: #333; font-weight: 600;">{{ result.grade }}</td>
+                            <td style="padding: 14px 20px; color: #333;">{{ result.semester }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div
+                style="text-align: center; padding: 60px; background: #f4f7fb; border-radius: 4px; border: 1px solid #dde4ed;">
+                <h5 style="color: #0a1628; font-family: Playfair Display, serif; margin-bottom: 10px;">No results
+                    available yet.</h5>
+                <p style="color: #888; font-size: 14px;">Your results have not been uploaded yet. Please check back
+                    later or contact the academic office.</p>
+            </div>
+
+
+            <div style="margin-top: 28px;">
+                <a href="/accounts/logout/"
+                    style="background: #0a1628; color: white; padding: 11px 24px; border-radius: 3px; text-decoration: none; font-weight: 600; font-size: 14px;">Logout</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -145,7 +145,7 @@ SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SAMESITE = 'Lax'
 # Security Settings
 DEBUG = False
-
+DEBUG = os.environ.get('DEBUG', 'TRUE') == True
 ALLOWED_HOSTS = ['*']
 
 # Prevent clickjacking

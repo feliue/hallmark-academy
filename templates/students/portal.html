@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+
 <div class="page-header">
     <div class="container">
         <h1>Student Portal</h1>
@@ -17,7 +20,7 @@
                     Please contact the academic office if you notice any discrepancies.</p>
             </div>
 
-
+            {% if results %}
             <div style="border: 1px solid #dde4ed; border-radius: 4px; overflow: hidden;">
                 <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
                     <thead>
@@ -29,18 +32,18 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        {% for result in results %}
                         <tr style="border-bottom: 1px solid #dde4ed;">
                             <td style="padding: 14px 20px; color: #333;">{{ result.subject }}</td>
                             <td style="padding: 14px 20px; color: #333;">{{ result.score }}</td>
                             <td style="padding: 14px 20px; color: #333; font-weight: 600;">{{ result.grade }}</td>
                             <td style="padding: 14px 20px; color: #333;">{{ result.semester }}</td>
                         </tr>
-
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
-
+            {% else %}
             <div
                 style="text-align: center; padding: 60px; background: #f4f7fb; border-radius: 4px; border: 1px solid #dde4ed;">
                 <h5 style="color: #0a1628; font-family: Playfair Display, serif; margin-bottom: 10px;">No results
@@ -48,7 +51,7 @@
                 <p style="color: #888; font-size: 14px;">Your results have not been uploaded yet. Please check back
                     later or contact the academic office.</p>
             </div>
-
+            {% endif %}
 
             <div style="margin-top: 28px;">
                 <a href="/accounts/logout/"

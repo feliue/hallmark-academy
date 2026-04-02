@@ -17,10 +17,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', 'django-insecure-hallmark-dev-key-2026')
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['*']
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
@@ -32,8 +31,8 @@ DEBUG = True
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', 'django-insecure-hallmark-dev-key-2026')
 
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -144,9 +143,9 @@ CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'http://localhost:8000']
 SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SAMESITE = 'Lax'
 # Security Settings
-DEBUG = False
+DEBUG = True
 DEBUG = os.environ.get('DEBUG', 'TRUE') == True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['hallmark-acedemy.onrender.com']
 
 # Prevent clickjacking
 X_FRAME_OPTIONS = 'DENY'

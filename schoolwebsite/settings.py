@@ -135,15 +135,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-CRISPY_TEMPLATE_PACK = 'crispy_forms',
-'crispy_bootstrap4',
+CRISPY_TEMPLATE_PACK = 'crispy_bootstrap4',
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'http://localhost:8000']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000',
+                        'http://localhost:8000', "https://hallmark.onrender.com"]
 SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SAMESITE = 'Lax'
 # Security Settings
-DEBUG = True
 DEBUG = os.environ.get('DEBUG', 'TRUE') == True
 ALLOWED_HOSTS = ['hallmark-acedemy.onrender.com']
 
@@ -152,7 +151,6 @@ X_FRAME_OPTIONS = 'DENY'
 
 # Force HTTPS
 SECURE_SSL_REDIRECT = False
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 # Protect browser from XSS attacks
 SECURE_BROWSER_XSS_FILTER = True
 

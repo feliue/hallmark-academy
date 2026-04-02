@@ -1,1 +1,1 @@
-web: gunicorn schoolwebsite.wsgi:application
+web: gunicorn hallmark_academy.wsgi:application

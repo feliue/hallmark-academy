@@ -152,8 +152,7 @@ X_FRAME_OPTIONS = 'DENY'
 
 # Force HTTPS
 SECURE_SSL_REDIRECT = False
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 # Protect browser from XSS attacks
 SECURE_BROWSER_XSS_FILTER = True
 

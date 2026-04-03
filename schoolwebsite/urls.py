@@ -18,13 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-urlpatterns = urlpatterns = [
+
+urlpatterns = [
     path('hallmark-secure-admin-2026/', admin.site.urls),
     path('', include('home.urls')),
-    path('about/', include('home.urls')),
     path('students/', include('students.urls')),
     path('news/', include('news.urls')),
     path('gallery/', include('gallery.urls')),
     path('accounts/', include('accounts.urls')),
-    path('contact/', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
